@@ -25,7 +25,7 @@ except FileNotFoundError:
     vocab = {"<PAD>": 0, "<SOS>": 1, "<EOS>": 2, "<UNK>": 3}
     inv_vocab = {0: "<PAD>", 1: "<SOS>", 2: "<EOS>", 3: "<UNK>"}
 
-# BƯỚC 2: COPY CÁC CLASS MÔ HÌNH CỦA BẠN VÀO ĐÂY
+# BƯỚC 2: Các models được định nghĩa trong Notebook đã được copy vào đây để đảm bảo tính nhất quán khi tải trọng số .pth vào các mô hình này.
 class QuestionEncoder(nn.Module):
     def __init__(self, vocab_size):
         super().__init__()
@@ -397,7 +397,7 @@ btn_compare.pack(pady=10)
 img_canvas = tk.Canvas(window, width=300, height=300, bg="lightgray", highlightthickness=1, highlightbackground="black")
 img_canvas.pack(pady=10)
 
-tk.Label(window, text="Kết quả dự đoán:", font=("Helvetica", 14, "bold"), fg='blue').pack(pady=5)
+tk.Label(window, text="Predicted results:", font=("Helvetica", 14, "bold"), fg='blue').pack(pady=5)
 lbl_res_1 = tk.Label(window, text="Model 1 (Base): Waiting...", font=("Helvetica", 12))
 lbl_res_1.pack(pady=2)
 lbl_res_2 = tk.Label(window, text="Model 2 (Attention): Waiting...", font=("Helvetica", 12))
